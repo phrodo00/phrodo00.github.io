@@ -1,0 +1,8 @@
+---
+layout: post
+title: "test post"
+date: 2013-12-17 01:03:18 -0300
+comments: true
+categories: 
+---
+Probando [Octopress](http://octopress.org).
