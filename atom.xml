@@ -1,137 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
-
-  
-  <meta name="description" content="
-">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://phrodo00.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:phrodo00.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://phrodo00.github.io/atom.xml" rel="self"/>
+  <link href="http://phrodo00.github.io/"/>
+  <updated>2013-12-17T02:32:53-03:00</updated>
+  <id>http://phrodo00.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2013/12/17/test-post/">Test Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2013-12-17T01:03:18-03:00" pubdate data-updated="true">Dec 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
+  <entry>
+    <title type="html"><![CDATA[Test Post]]></title>
+    <link href="http://phrodo00.github.io/blog/2013/12/17/test-post/"/>
+    <updated>2013-12-17T01:03:18-03:00</updated>
+    <id>http://phrodo00.github.io/blog/2013/12/17/test-post</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/02/instalando-paquetes-de-node-js-en-la-home/">Instalando Paquetes De Node-js en La Home</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-02T00:00:00-04:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://npmjs.org/">npm</a>, el gestor de paquetes de node-js es capaz de instalar
+  <entry>
+    <title type="html"><![CDATA[Instalando Paquetes De Node-js en La Home]]></title>
+    <link href="http://phrodo00.github.io/blog/2012/05/02/instalando-paquetes-de-node-js-en-la-home/"/>
+    <updated>2012-05-02T00:00:00-04:00</updated>
+    <id>http://phrodo00.github.io/blog/2012/05/02/instalando-paquetes-de-node-js-en-la-home</id>
+    <content type="html"><![CDATA[<p><a href="http://npmjs.org/">npm</a>, el gestor de paquetes de node-js es capaz de instalar
 paquetes de forma &ldquo;local&rdquo; o &ldquo;global&rdquo;. Los paquetes instalados de forma local se
 instalan en el directorio actual y están pensados para incluirse en otros
 programas, como bibliotecas. Si se instalan de forma global, los deja en el
@@ -162,42 +58,15 @@ pasa a ser:</p>
 
 
 <p>y lo mismo para less o uglify-js.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/02/rsync-server-en-windows/">Rsync Server en Windows</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-02T00:00:00-03:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Debido a que me gusta jugar starcraft resulta que me armé un computador de
+  <entry>
+    <title type="html"><![CDATA[Rsync Server en Windows]]></title>
+    <link href="http://phrodo00.github.io/blog/2012/01/02/rsync-server-en-windows/"/>
+    <updated>2012-01-02T00:00:00-03:00</updated>
+    <id>http://phrodo00.github.io/blog/2012/01/02/rsync-server-en-windows</id>
+    <content type="html"><![CDATA[<p>Debido a que me gusta jugar starcraft resulta que me armé un computador de
 gaming, y como la idea es poder jugar en cualquier momento, su OS principal es
 windows, lo que es&hellip; extraño para mí. De cualquier forma, el primer paso en
 recuperar la utilidad de mi computador de fue encontrar un servidor de rsync, y
@@ -214,42 +83,15 @@ van a terminar todos mal. Para solucionar esto, se puede descomprimir
 en DeltaCopy (la dll se encuentra en la misca carpeta donde instalaron el
 programa), y reiniciando el servicio (click derecho en
 Equipo→Administrar→Servicios→click derecho en DeltaCopy→Reiniciar).</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux/">Pasando De Bluray a Mkv en Linux</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-01T00:00:00-03:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Para pasar del formato TS de discos bluray (y en mi caso, de las cámaras con
+  <entry>
+    <title type="html"><![CDATA[Pasando De Bluray a Mkv en Linux]]></title>
+    <link href="http://phrodo00.github.io/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux/"/>
+    <updated>2011-12-01T00:00:00-03:00</updated>
+    <id>http://phrodo00.github.io/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux</id>
+    <content type="html"><![CDATA[<p>Para pasar del formato TS de discos bluray (y en mi caso, de las cámaras con
 disco duro de panasonic), se debe primero demuxear los archivos de video
 (ubicados en la carpeta STREAM. No sé como será en los discos bluray, pero en la
 cámara está en <em>AVCHD/BDMV</em>) utilizando
@@ -276,42 +118,15 @@ la variación se provoca debido al interlazado, pero no estoy seguro.</p>
 
 <p>Y listo el archivo mkv para poder agregarlo a algun editor de video o
 simplemente verlo.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/06/instalando-coffeescript-en-la-home/">Instalando CoffeeScript en La Home</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-07-06T00:00:00-04:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://jashkenas.github.com/coffee-script">CoffeeScript</a> es un lindo lenguaje
+  <entry>
+    <title type="html"><![CDATA[Instalando CoffeeScript en La Home]]></title>
+    <link href="http://phrodo00.github.io/blog/2011/07/06/instalando-coffeescript-en-la-home/"/>
+    <updated>2011-07-06T00:00:00-04:00</updated>
+    <id>http://phrodo00.github.io/blog/2011/07/06/instalando-coffeescript-en-la-home</id>
+    <content type="html"><![CDATA[<p><a href="http://jashkenas.github.com/coffee-script">CoffeeScript</a> es un lindo lenguaje
 que toma las mejores ideas de otros lenguajes dinámicos como python o ruby y se
 compila a javascript. Para mí, la sintaxis es mucho más clara que la sintaxis
 tipo algol de js.</p>
@@ -355,84 +170,7 @@ desarrollo), descomprimirla, y desde su carpeta hacer lo siguinte:</p>
 <p>Ahora tenemos instalado coffee en la home y tan sólo nos basta ejecutar coffee
 -c archivo.coffee para compilar nuestros archivos de coffeescript a javascript
 :)</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/12/17/test-post/">Test Post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/05/02/instalando-paquetes-de-node-js-en-la-home/">Instalando Paquetes De Node-js en La Home</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/01/02/rsync-server-en-windows/">Rsync Server en Windows</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux/">Pasando De Bluray a Mkv en Linux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/07/06/instalando-coffeescript-en-la-home/">Instalando CoffeeScript en La Home</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Your Name -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

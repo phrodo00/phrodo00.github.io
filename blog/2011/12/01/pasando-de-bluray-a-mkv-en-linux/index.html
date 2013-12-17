@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Pasando De Bluray a Mkv en Linux - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Para pasar del formato TS de discos bluray (y en mi caso, de las cámaras con
+disco duro de panasonic), se debe primero demuxear los archivos de video &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://phrodo00.github.io/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:phrodo00.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Pasando De Bluray a Mkv en Linux</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-01T00:00:00-03:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Para pasar del formato TS de discos bluray (y en mi caso, de las cámaras con
+disco duro de panasonic), se debe primero demuxear los archivos de video
+(ubicados en la carpeta STREAM. No sé como será en los discos bluray, pero en la
+cámara está en <em>AVCHD/BDMV</em>) utilizando
+<a href="http://www.videohelp.com/tools/tsMuxeR">TSMuxer</a>. Para utilizarlo, simplemente
+se descomprime el archivo y se ejecuta tsMuxerGUI. Para que quede un solo video,
+se debe agregar el primer video de la serie con el botón “add”, y el resto con
+“join”. Solo falta selexionar el “Demux” en la parte de output y hechar a correr
+el demuxeo. Es útil usar el directorio /tmp/, ya que estos datos no los vamos a
+utilizar mucho.</p>
+
+<p><a href="http://imgur.com/a/G6Hc4#0"><img class="center" src="http://i.imgur.com/cOh6d.png" width="400"></a></p>
+
+<p>Una vez listo eso, se debe instalar mkvtoolnix-gui (debería estar en el gestor
+de paquetes de la distro), y agregar los archivos demuxeados. En el caso de la
+cámara que estaban usando (Panasonic HDC-HS80), mkvtoolnix no pudo detectar el
+framerate del video, por lo que hay que ingresarlo manualmente, y en esta cámara
+es 60000/1001.</p>
+
+<p>El framerate me causó problemas porque en TSMuxeR dice que el video tiene 29.97
+fps (o sea, 30000/1001), pero el video se veía demasiado lento. Me imágino que
+la variación se provoca debido al interlazado, pero no estoy seguro.</p>
+
+<p><a href="http://imgur.com/a/G6Hc4#1"><img class="center" src="http://i.imgur.com/4M2yU.png" width="400"></a></p>
+
+<p>Y listo el archivo mkv para poder agregarlo a algun editor de video o
+simplemente verlo.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-01T00:00:00-03:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/herramientas/'>Herramientas</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://phrodo00.github.io/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux/" data-via="" data-counturl="http://phrodo00.github.io/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/07/06/instalando-coffeescript-en-la-home/" title="Previous Post: Instalando CoffeeScript en la home">&laquo; Instalando CoffeeScript en la home</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/01/02/rsync-server-en-windows/" title="Next Post: rsync server en windows">rsync server en windows &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/12/17/test-post/">Test Post</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/02/instalando-paquetes-de-node-js-en-la-home/">Instalando Paquetes De Node-js en La Home</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/02/rsync-server-en-windows/">Rsync Server en Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux/">Pasando De Bluray a Mkv en Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/07/06/instalando-coffeescript-en-la-home/">Instalando CoffeeScript en La Home</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

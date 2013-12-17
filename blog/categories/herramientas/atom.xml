@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Herramientas | My Octopress Blog]]></title>
+  <link href="http://phrodo00.github.io/blog/categories/herramientas/atom.xml" rel="self"/>
+  <link href="http://phrodo00.github.io/"/>
+  <updated>2013-12-17T02:32:53-03:00</updated>
+  <id>http://phrodo00.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Instalando Paquetes De Node-js en La Home]]></title>
+    <link href="http://phrodo00.github.io/blog/2012/05/02/instalando-paquetes-de-node-js-en-la-home/"/>
+    <updated>2012-05-02T00:00:00-04:00</updated>
+    <id>http://phrodo00.github.io/blog/2012/05/02/instalando-paquetes-de-node-js-en-la-home</id>
+    <content type="html"><![CDATA[<p><a href="http://npmjs.org/">npm</a>, el gestor de paquetes de node-js es capaz de instalar
+paquetes de forma &ldquo;local&rdquo; o &ldquo;global&rdquo;. Los paquetes instalados de forma local se
+instalan en el directorio actual y están pensados para incluirse en otros
+programas, como bibliotecas. Si se instalan de forma global, los deja en el
+sistema para que se puedan usar como programas. El problema es que normalmente
+la instalación global requiere permisos de administrador, además que nunca se
+aprecia un gestor de paquetes metiéndose en la raíz aparte de la distro. Para
+evitar estos problemas se puede configurar a npm para que instale los paquetes
+globales en la home del usuario. Para hacer esto, es necesario crear un archivo
+~/.npmrc con los contenidos:</p>
+
+<p><code>
+prefix = ~/.local
+</code></p>
+
+<p>y claro, en alguna parte de nuestro ~/.bashrc (si usan bash, para zsh claramente
+el archivo es ~/.zshrc) hay que agregar a ~/.local/bin a la path:</p>
+
+<p><code>
+export PATH=$HOME/.local/bin:$PATH
+</code></p>
+
+<p>Con esto ya podemos instalar programas de node-js directamente en la home, por
+lo que el <a href="http://localhost:4000/blog/2011/07/06/instalando-coffeescript-en-la-home/">tutorial para instalar coffeescript</a>
+pasa a ser:</p>
+
+<p><code>
+$npm install -g coffee-script
+</code></p>
+
+<p>y lo mismo para less o uglify-js.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rsync Server en Windows]]></title>
+    <link href="http://phrodo00.github.io/blog/2012/01/02/rsync-server-en-windows/"/>
+    <updated>2012-01-02T00:00:00-03:00</updated>
+    <id>http://phrodo00.github.io/blog/2012/01/02/rsync-server-en-windows</id>
+    <content type="html"><![CDATA[<p>Debido a que me gusta jugar starcraft resulta que me armé un computador de
+gaming, y como la idea es poder jugar en cualquier momento, su OS principal es
+windows, lo que es&hellip; extraño para mí. De cualquier forma, el primer paso en
+recuperar la utilidad de mi computador de fue encontrar un servidor de rsync, y
+resulta que <a href="http://www.aboutmyip.com/AboutMyXApp/DeltaCopy.jsp">DeltaCopy</a> es
+bastante bueno. <a href="http://dailycupoftech.com/windows-backup-with-rsync-and-freenas/">Acá hay un tutorial de como instalarlo</a>
+que encontré despues, mientras intentaba abrir el puerto, pero eso para otro
+post.</p>
+
+<p><strong>Edición:</strong> Resulta que DeltaCopy por defecto no funciona con unicode, lo que
+significa que si tienen el sistema linux desde el que están sincronizando en una
+codificación distinta al server (que es lo típico), los nombres de los archivos
+van a terminar todos mal. Para solucionar esto, se puede descomprimir
+<a href="http://www.oki-osk.jp/esc/utf8-cygwin">utf8-cygwin</a> encima del cygwin incluido
+en DeltaCopy (la dll se encuentra en la misca carpeta donde instalaron el
+programa), y reiniciando el servicio (click derecho en
+Equipo→Administrar→Servicios→click derecho en DeltaCopy→Reiniciar).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pasando De Bluray a Mkv en Linux]]></title>
+    <link href="http://phrodo00.github.io/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux/"/>
+    <updated>2011-12-01T00:00:00-03:00</updated>
+    <id>http://phrodo00.github.io/blog/2011/12/01/pasando-de-bluray-a-mkv-en-linux</id>
+    <content type="html"><![CDATA[<p>Para pasar del formato TS de discos bluray (y en mi caso, de las cámaras con
+disco duro de panasonic), se debe primero demuxear los archivos de video
+(ubicados en la carpeta STREAM. No sé como será en los discos bluray, pero en la
+cámara está en <em>AVCHD/BDMV</em>) utilizando
+<a href="http://www.videohelp.com/tools/tsMuxeR">TSMuxer</a>. Para utilizarlo, simplemente
+se descomprime el archivo y se ejecuta tsMuxerGUI. Para que quede un solo video,
+se debe agregar el primer video de la serie con el botón “add”, y el resto con
+“join”. Solo falta selexionar el “Demux” en la parte de output y hechar a correr
+el demuxeo. Es útil usar el directorio /tmp/, ya que estos datos no los vamos a
+utilizar mucho.</p>
+
+<p><a href="http://imgur.com/a/G6Hc4#0"><img class="center" src="http://i.imgur.com/cOh6d.png" width="400"></a></p>
+
+<p>Una vez listo eso, se debe instalar mkvtoolnix-gui (debería estar en el gestor
+de paquetes de la distro), y agregar los archivos demuxeados. En el caso de la
+cámara que estaban usando (Panasonic HDC-HS80), mkvtoolnix no pudo detectar el
+framerate del video, por lo que hay que ingresarlo manualmente, y en esta cámara
+es 60000/1001.</p>
+
+<p>El framerate me causó problemas porque en TSMuxeR dice que el video tiene 29.97
+fps (o sea, 30000/1001), pero el video se veía demasiado lento. Me imágino que
+la variación se provoca debido al interlazado, pero no estoy seguro.</p>
+
+<p><a href="http://imgur.com/a/G6Hc4#1"><img class="center" src="http://i.imgur.com/4M2yU.png" width="400"></a></p>
+
+<p>Y listo el archivo mkv para poder agregarlo a algun editor de video o
+simplemente verlo.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Instalando CoffeeScript en La Home]]></title>
+    <link href="http://phrodo00.github.io/blog/2011/07/06/instalando-coffeescript-en-la-home/"/>
+    <updated>2011-07-06T00:00:00-04:00</updated>
+    <id>http://phrodo00.github.io/blog/2011/07/06/instalando-coffeescript-en-la-home</id>
+    <content type="html"><![CDATA[<p><a href="http://jashkenas.github.com/coffee-script">CoffeeScript</a> es un lindo lenguaje
+que toma las mejores ideas de otros lenguajes dinámicos como python o ruby y se
+compila a javascript. Para mí, la sintaxis es mucho más clara que la sintaxis
+tipo algol de js.</p>
+
+<p>Normalmente tengo mis herramientas de desarrollo web instaladas en mi home, así
+puedo obtenerlas en cualquier distribución. Instalo
+<a href="http://rubyonrails.org/">Rails</a> sobre <a href="https://rvm.beginrescueend.com/">rvm</a> y
+uso pythonenvs para instalar <a href="https://www.djangoproject.com/">Django</a> y
+<a href="http://pylonsproject.org/">Pyramid</a>, así que ahora vamos a ver como instalar el
+compilador de coffescript en la home.</p>
+
+<p>Lo primero es instalar <a href="http://nodejs.org/">Node.js</a>, el runtime para programar
+aplicaciones en javascript. Esto es tan simple como bajarse el fuente,
+descomprimirlo, y, dentro de la carpeta, ejecutar:</p>
+
+<p><code>
+./configure --prefix=$HOME/.local
+make
+make install
+</code></p>
+
+<p>Una vez instalado, hay que asegurarse que ~/.local/bin sea parte del PATH, si no
+lo es (o si no sabes lo que es el path) agrega esta línea a tu archivo
+~/.bashrc:</p>
+
+<p><code>
+export PATH=$HOME/.local/bin:PATH
+</code></p>
+
+<p>Una vez hecho esto, es sólo cuestión de bajarse la última versión de
+<a href="https://github.com/jashkenas/coffee-script/archives/master">coffescript</a> (hacer
+click en los enlaces con números de versión para no obtener la versión de
+desarrollo), descomprimirla, y desde su carpeta hacer lo siguinte:</p>
+
+<p><code>
+bin/cake --prefix $HOME/.local install
+</code></p>
+
+<p>Ahora tenemos instalado coffee en la home y tan sólo nos basta ejecutar coffee
+-c archivo.coffee para compilar nuestros archivos de coffeescript a javascript
+:)</p>
+]]></content>
+  </entry>
+  
+</feed>
